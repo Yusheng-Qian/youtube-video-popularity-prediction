@@ -1,0 +1,10 @@
+from sklearn.ensemble import RandomForestRegressor
+
+rf = RandomForestRegressor(
+    n_estimators=100,
+    random_state=42
+)
+
+rf.fit(X_train, y_train)
+
+pred_rf = rf.predict(X_test)
