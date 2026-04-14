@@ -1,0 +1,9 @@
+# convert publish_time
+df["publish_time"] = pd.to_datetime(df["publish_time"], errors="coerce")
+
+# extract time features
+df["publish_hour"] = df["publish_time"].dt.hour
+df["publish_month"] = df["publish_time"].dt.month
+
+# drop missing
+df = df.dropna()
