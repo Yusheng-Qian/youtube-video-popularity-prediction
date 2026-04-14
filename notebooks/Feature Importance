@@ -1,0 +1,19 @@
+import pandas as pd
+
+importance = rf.feature_importances_
+
+feature_importance = pd.DataFrame({
+    "feature": features,
+    "importance": importance
+}).sort_values("importance", ascending=False)
+
+feature_importance
+
+sns.barplot(
+    x="importance",
+    y="feature",
+    data=feature_importance
+)
+
+plt.title("Feature Importance")
+plt.show()
