@@ -1,0 +1,9 @@
+df.info()
+df.describe()
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize=(8,5))
+sns.histplot(df["views"], bins=50)
+plt.title("Distribution of Video Views")
+plt.show()
